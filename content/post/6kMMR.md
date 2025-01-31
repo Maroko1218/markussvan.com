@@ -7,4 +7,4 @@ draft = false
 
 I just hit 6k MMR in Dota 2!
 
-![Picture showing my recent matches and my MMR of 6012](/6kMMR.png)
+![Picture showing my recent matches and my MMR of 6012](/images/6kMMR.png)

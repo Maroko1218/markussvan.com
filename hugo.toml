@@ -4,7 +4,7 @@ title = 'Markus Svan'
 theme = 'github-style'
 [params]
 	author = "Markus Svan"
-	avatar = "/avatar.jpg"
+	avatar = "/images/avatar.jpg"
 	description = "I use Arch btw."
 	github = "Maroko1218"
 	email = "mail@markussvan.com"
