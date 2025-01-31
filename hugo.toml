@@ -1,7 +1,7 @@
-baseURL = 'https://markussvan.com'
-languageCode = 'en-us'
-title = 'Markus Svan'
-theme = 'github-style'
+baseURL = "https://markussvan.com"
+languageCode = "en-us"
+title = "Markus Svan"
+theme = "github-style"
 [params]
 	author = "Markus Svan"
 	avatar = "/images/avatar.jpg"
