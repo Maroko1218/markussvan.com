@@ -2,6 +2,7 @@ baseURL = "https://markussvan.com"
 languageCode = "en-us"
 title = "Markus Svan"
 theme = "github-style"
+
 [params]
 	author = "Markus Svan"
 	avatar = "/images/avatar.jpg"
@@ -13,7 +14,8 @@ theme = "github-style"
 	location = "Sweden"
 	headerIcon = "/images/github-mark-white.png"
 	enableGitalk = true
-	
+	enableSearch = true
+
 	[[params.links]]
 		title = "Work GitHub"
 		href = "https://github.com/MS-poji"
@@ -32,3 +34,11 @@ theme = "github-style"
 		pagerDirection = "last"
 		createIssueManually = true
 		distractionFreeMode = false
+
+[outputs]
+	home = ["html", "json"]
+
+[outputFormats.json]
+	mediaType = "application/json"
+	baseName = "index"
+	isPlainText = false
