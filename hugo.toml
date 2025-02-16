@@ -12,3 +12,23 @@ theme = "github-style"
 	favicon = "/images/github-mark-white.png"
 	location = "Sweden"
 	headerIcon = "/images/github-mark-white.png"
+	enableGitalk = true
+	
+	[[params.links]]
+		title = "Work GitHub"
+		href = "https://github.com/MS-poji"
+		icon = "https://markussvan.com/images/github-mark-white.png"
+
+
+	[params.gitalk]
+		clientID = "Ov23likuqOyU4kZG7uOl"
+		clientSecret = "b3d2b131a8aa631a3755bdf52d2b6c25e78697c4"
+		repo = "markussvan.com-gitalk"
+		owner = "Maroko1218"
+		admin = "Maroko1218"
+		id = "location.pathname"
+		labels = "gitalk"
+		perPage = 15
+		pagerDirection = "last"
+		createIssueManually = true
+		distractionFreeMode = false
