@@ -22,10 +22,10 @@ theme = "github-style"
 
 
 	[params.giscus]
-        repo = "Maroko1218/markussvan.com-gitalk"
-        repoID = "R_kgDONy9-ag"
+        repo = "Maroko1218/markussvan.com"
+        repoID = "R_kgDONx5B3g"
         category = "Comments"
-        categoryID = "DIC_kwDONy9-as4CnfZX"
+        categoryID = "DIC_kwDONx5B3s4Cng1x"
         mapping = "og:title"
         strict = "1"
         reactionsEnabled = "1"
