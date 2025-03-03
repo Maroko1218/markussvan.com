@@ -13,7 +13,6 @@ theme = "github-style"
 	favicon = "/images/github-mark-white.png"
 	location = "Sweden"
 	headerIcon = "/images/github-mark-white.png"
-	enableGitalk = true
 	enableSearch = true
 
 	[[params.links]]
@@ -22,18 +21,19 @@ theme = "github-style"
 		icon = "https://markussvan.com/images/github-mark-white.png"
 
 
-	[params.gitalk]
-		clientID = "Ov23likuqOyU4kZG7uOl"
-		clientSecret = "b3d2b131a8aa631a3755bdf52d2b6c25e78697c4"
-		repo = "markussvan.com-gitalk"
-		owner = "Maroko1218"
-		admin = "Maroko1218"
-		id = "location.pathname"
-		labels = "gitalk"
-		perPage = 15
-		pagerDirection = "last"
-		createIssueManually = true
-		distractionFreeMode = false
+	[params.giscus]
+        repo = "Maroko1218/markussvan.com-gitalk"
+        repoID = "R_kgDONy9-ag"
+        category = "Comments"
+        categoryID = "DIC_kwDONy9-as4CnfZX"
+        mapping = "og:title"
+        strict = "1"
+        reactionsEnabled = "1"
+        emitMetadata = "0"
+        inputPosition = "top"
+        lang = "en"
+        crossOrigin = "anonymous"
+
 
 [outputs]
 	home = ["html", "json"]
