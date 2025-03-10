@@ -1,5 +1,12 @@
 {{- if isset .Site.Params "giscus" -}}
-    <div class="comments-giscus" style="max-width: 840px; margin: 0 auto;">
+    <div class="comments-giscus" style="
+    max-width: 840px;
+    margin: 0 auto;
+    padding: 0 16px;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    ">
         <script>
             document.addEventListener('DOMContentLoaded', function () {
                 const giscusAttributes = {
