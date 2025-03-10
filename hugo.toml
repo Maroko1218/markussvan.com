@@ -2,6 +2,7 @@ baseURL = "https://markussvan.com"
 languageCode = "en-us"
 title = "Markus Svan"
 theme = "github-style"
+enableGitInfo = true
 
 [params]
 	author = "Markus Svan"
