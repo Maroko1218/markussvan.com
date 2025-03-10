@@ -14,12 +14,7 @@ theme = "github-style"
 	location = "Sweden"
 	headerIcon = "/images/github-mark-white.png"
 	enableSearch = true
-
-	[[params.links]]
-		title = "Work GitHub"
-		href = "https://github.com/MS-poji"
-		icon = "https://markussvan.com/images/github-mark-white.png"
-
+	lastmod = true
 
 	[params.giscus]
         repo = "Maroko1218/markussvan.com"
@@ -34,6 +29,8 @@ theme = "github-style"
         lang = "en"
         crossOrigin = "anonymous"
 
+[frontmatter]
+  lastmod = ["lastmod", ":git", ":default"]
 
 [outputs]
 	home = ["html", "json"]
