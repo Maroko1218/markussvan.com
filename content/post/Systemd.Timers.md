@@ -1,6 +1,6 @@
 ---
 title: "Systemd.Timers"
-date: 2024-04-04T07:06:42+02:00
+date: 2024-04-04
 draft: false
 ---
 I've added some Systemd.Timers to this site which I was hoping would automatically update the main page calendar to not still say "December" when we're already in April.
