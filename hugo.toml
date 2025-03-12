@@ -31,7 +31,7 @@ enableGitInfo = true
         crossOrigin = "anonymous"
 
 [frontmatter]
-  lastmod = ["lastmod", ":git", ":default"]
+	lastmod = ["lastmod", ":git", ":default"]
 
 [outputs]
 	home = ["html", "json"]
