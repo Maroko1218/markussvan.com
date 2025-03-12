@@ -10,4 +10,4 @@ I think it is very much possible and that I should have the skills needed to mak
 
 ## A *very* rough estimate of things needed
 - GitHub Actions to have some sort of auto deployment when new posts are pushed... (Or a periodic pull using the already existing systemd timer?)
-- A script which will convert the `[[obsidian]]` style links to `[hugo]({*{< relref path="style" >}})` links. ~~The * is there simply to make hugo build not complain about actually trying to make a link.~~
+- A script which will convert the `[*[obsidian]]` style links to `[hugo]({*{< relref path="style" >}})` links. ~~The * is there simply to make hugo build not complain about actually trying to make a link.~~
