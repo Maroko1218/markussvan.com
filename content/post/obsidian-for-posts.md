@@ -11,7 +11,7 @@ I think it is very much possible and that I should have the skills needed to mak
 
 ## A *very* rough estimate of things needed
 - GitHub Actions to have some sort of auto deployment when new posts are pushed... (Or a periodic pull using the already existing systemd timer?)
-- A script which will convert the `[[obsidian]]` style links to `[hugo]({{</* relref path="style" */>}})` links. ~~The /**/ comment block is to prevent hugo from trying to link something which doesn't exist~~
+- A script which will convert the `[[obsidian]]` style links to `[hugo]({{</* relref path="style" */>}})` links.
 
 # I have implemented it. And everything above was entirely clueless!
 What a ride, I kept searching for "obsidian to hugo converter" or similar things. But what I really needed was "wikilinks to hugo". This search made me find the [hugo-wikilinks](https://github.com/milafrerichs/hugo-wikilinks) repository by [Mila Frerichs](https://github.com/milafrerichs) and it did everything I needed from it!
@@ -30,7 +30,7 @@ I copied the `content-wikilinks.html` partial into my theme's `/layouts/partials
 #### Missing bracket
 I simply added the missing `{`
 #### Avoid XSS
-The line in question which causes this error is the following: `{{ $link := printf "%s%s%s%s%s" "<a href=\"" $rel "\">" $content "</a>"  }}`. The solution was rather simple, I just replaced the building of an html tag with the building of a hugo link: `{{ $link := printf "%s%s%s%s%s" "[" $content "]({{</* relref path=\"" $rel "\"*/>}})" }}`. ~~without the /* */~~
+The line in question which causes this error is the following: `{{ $link := printf "%s%s%s%s%s" "<a href=\"" $rel "\">" $content "</a>"  }}`. The solution was rather simple, I just replaced the building of an html tag with the building of a hugo link: `{{ $link := printf "%s%s%s%s%s" "[" $content "]({{</* relref path=\"" $rel "\"*/>}})" }}`.
 #### Don't make a link if no post exists
 This was rather complicated for me to figure out as I hadn't played around with hugo much before. But I feel pretty happy with my solution! It required some modification of the `content-wikilinks.html` file. Specifically the following code block:
 ```
@@ -45,7 +45,7 @@ By slotting this logic check in before calling relref, if a page doesn't exist w
 The github repo also included a function for backlinks... And this really appeals to me. Being able to show all the posts which have mentioned the current post really gives the *obsidian feel* to the posts which feels like such a good way to traverse the website on related content, __related thoughts__. Now, this was a little difficult to implement and I don't think my solution is the cleanest or prettiest *yet*. (I am very likely going to update this snippet with time.) But I will still document what I did to add the backlinks!
 
 ### The simple solution
-I added the `backlinks.html` partial into `/layouts/partials/funcs/`. This time the file itself needed no modifications to make it function, but it takes a little bit of effort to actually have the expected result. Right below where I added `{{ partial "content-wikilinks" . }}` (that's this text you're reading right now!) I placed the following code block. ~~Without the /* */~~
+I added the `backlinks.html` partial into `/layouts/partials/funcs/`. This time the file itself needed no modifications to make it function, but it takes a little bit of effort to actually have the expected result. Right below where I added `{{ partial "content-wikilinks" . }}` (that's this text you're reading right now!) I placed the following code block.
 ```
 {{ $backlinks := partial "funcs/backlinks.html" . }}
 {{ if $backlinks }}
