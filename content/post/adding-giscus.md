@@ -1,8 +1,8 @@
 ---
-title: "Adding giscus and replacing gitalk"
+title: Adding giscus and replacing gitalk
 date: 2025-03-03
 draft: false
-summary: "Adding giscus to my site. I really wanted the reactions which were lacking from gitalk, and using discussions for the backend instead of issues."
+summary: Adding giscus to my site. I really wanted the reactions which were lacking from gitalk, and using discussions for the backend instead of issues.
 ---
 # Adding Giscus
 

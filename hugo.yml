@@ -1,0 +1,42 @@
+baseURL: https://markussvan.com
+languageCode: en-us
+title: Markus Svan
+theme: github-style
+enableGitInfo: true
+
+params:
+  author: Markus Svan
+  avatar: /images/avatar.jpg
+  description: I use Arch btw.
+  github: Maroko1218
+  email: mail@markussvan.com
+  url: https://markussvan.com/
+  favicon: /images/github-mark-white.png
+  location: Sweden
+  headerIcon: /images/github-mark-white.png
+  enableSearch: true
+  lastmod: true
+
+  giscus:
+    repo: Maroko1218/markussvan.com
+    repoID: R_kgDONx5B3g
+    category: Comments
+    categoryID: DIC_kwDONx5B3s4Cng1x
+    mapping: og:title
+    strict: 1
+    reactionsEnabled: 1
+    emitMetadata: 0
+    inputPosition: top
+    lang: en
+    crossOrigin: anonymous
+
+frontmatter:
+  lastmod: ["lastmod", ":git", ":default"]
+
+outputs:
+  home: ["html", "json"]
+
+outputFormats.json:
+  mediaType: application/json
+  baseName: index
+  isPlainText: false

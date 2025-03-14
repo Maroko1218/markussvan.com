@@ -1,8 +1,8 @@
 ---
-title: "Using Obsidian for posts"
+title: Using Obsidian for posts
 date: 2025-03-10
 draft: False
-summary: "Details of how I enabled using Obsidian and wikilinks for making posts on my website!"
+summary: Details of how I enabled using Obsidian and wikilinks for making posts on my website!
 ---
 ## Using Obsidian for posts
 I have a sort of goal/dream where I could just edit these posts inside of Obsidian, save my vault, and have the website update.
