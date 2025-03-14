@@ -1,10 +1,10 @@
 ---
-title: "Obsidian for posts"
+title: "Using Obsidian for posts"
 date: 2025-03-10
 draft: False
-summary: "I want to use the power of Obsidian to tag and link between my posts"
+summary: "Details of how I enabled using Obsidian and wikilinks for making posts on my website!"
 ---
-## Obsidian for posts
+## Using Obsidian for posts
 I have a sort of goal/dream where I could just edit these posts inside of Obsidian, save my vault, and have the website update.
 
 I think it is very much possible and that I should have the skills needed to make this possible.
