@@ -2,7 +2,7 @@
 title: Setting Up Wireguard
 date: 2025-08-22
 draft: false
-summary: Summary not yet written
+summary: A somewhat detailed description of how to host your own Wireguard VPN server. As well as some basic wireguard configs.
 tags:
     - Linux
     - VPN
