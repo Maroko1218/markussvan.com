@@ -102,7 +102,7 @@ The rules if you have Docker installed on your server become the following.
 - `iptables -t nat -A POSTROUTING -o SERVERS_NETWORK_INTERFACE -j MASQUERADE` Add a rule to route the VPN traffic without interfering/disrupting the original connection.
 Make sure to change `SERVERS_NETWORK_INTERFACE` into the actual interface your server is using for it to use internet. In my case it was `enp3s0`. Check `ip a` to help figure out which one should be written down in your case.
 
-It's possible to add these iptables rules as part of a "PostUp" and "PostDown" clause on the servers wg0.conf so that you don't have to re-add these rules whenever you restart your server. *Or* you can make the changes persistent by saving the current iptables configuration to a file. `iptables-save /etc/iptables/iptables.rules` and enabling the iptables service to restore the saved rules. `systemctl enable iptables`
+It's possible to add these iptables rules as part of a "PostUp" and "PostDown" clause on the servers wg0.conf so that you don't have to re-add these rules whenever you restart your server. *Or* you can make the changes persistent by saving the current iptables configuration to a file. `iptables-save > /etc/iptables/iptables.rules` and enabling the iptables service to restore the saved rules. `systemctl enable iptables`
 
 The majority of guides I've seen opt for the PostUp and PostDown method, so I will also show the final configurations with these rules added.
 
