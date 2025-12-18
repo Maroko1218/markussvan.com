@@ -50,8 +50,8 @@ They should now be able to ping one another on the respective 10.0.0.1 and 10.0.
 
 ## Wan Config
 From now on I will be referring to "computer 1" as the *Server* and any other connection, such as computer 2, as a "Client".
-When under the lan, the computers can find each other thanks to the `Endpoint` line of the configuration. But in the scenario where I'm using my phone away from home, what would the server write down as an endpoint for my phone? Since it can change at any point, we now ommit writing down the endpoint of our clients connecting to the server.
-While on the client side we will be writing down the public IP of the Server, (a domain name helps here), but since we also won't be listening for any *incoming* connections, we can ommit the ListenPort field.
+When under the lan, the computers can find each other thanks to the `Endpoint` line of the configuration. But in the scenario where I'm using my phone away from home, what would the server write down as an endpoint for my phone? Since it can change at any point, we now omit writing down the endpoint of our clients connecting to the server.
+While on the client side we will be writing down the public IP of the Server, (a domain name helps here), but since we also won't be listening for any *incoming* connections, we can omit the ListenPort field.
 
 `/etc/wireguard/wg0.conf` of the Server
 ```
@@ -94,7 +94,7 @@ Now, this gave me the biggest headache. Because if you have Docker installed, th
 
 - [Where I first saw this mentioned after struggling for a week](https://gist.github.com/nealfennimore/92d571db63404e7ddfba660646ceaf0d?permalink_comment_id=4336598#gistcomment-4336598)
 - [Docker documentation](https://docs.docker.com/engine/network/packet-filtering-firewalls/#docker-on-a-router)
-- [Archlinux Wiki](https://wiki.archlinux.org/title/Internet_sharing#Enable_NAT)
+- [Arch Linux Wiki](https://wiki.archlinux.org/title/Internet_sharing#Enable_NAT)
 
 The rules if you have Docker installed on your server become the following.
 - `iptables -I DOCKER-USER -i wg0 -j ACCEPT` Add a rule to forward traffic from the wireguard interface.
@@ -107,7 +107,7 @@ It's possible to add these iptables rules as part of a "PostUp" and "PostDown" c
 The majority of guides I've seen opt for the PostUp and PostDown method, so I will also show the final configurations with these rules added.
 
 ### THE CAVEAT!
-Remeber long ago when I said routing "all" traffic... well... it was *almost* true. By default it seems wireguard won't try to forward traffic intended for your current lan, which, honestly, sounds quite sane. But since I wanted to access my *home router* through the VPN... and it has an IP address of `192.168.0.1`... I also need to add this to allowed IPs. The result looks like this `AllowedIPs = 0.0.0.0/0, 192.168.0.0/24
+Remember long ago when I said routing "all" traffic... well... it was *almost* true. By default it seems wireguard won't try to forward traffic intended for your current lan, which, honestly, sounds quite sane. But since I wanted to access my *home router* through the VPN... and it has an IP address of `192.168.0.1`... I also need to add this to allowed IPs. The result looks like this `AllowedIPs = 0.0.0.0/0, 192.168.0.0/24
 It's possible there are other addresses like these (I'd assume wireguard doesn't try to forward 127.0.0.1...), and by also forwarding what usually is LAN traffic through the VPN it *could* cause some issues connecting to some public WiFi...? (I think?) We're a bit in speculation land here. I haven't had any issues with it so far, but it's something to be cautious of. I also don't think I'd recommend this solution to others. It's much better to have the router as a predefined peer, I couldn't do this due to _proprietary_ reasons. 😞
 
 ## Final Configs for Server and Client

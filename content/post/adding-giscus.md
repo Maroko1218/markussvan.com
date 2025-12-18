@@ -74,7 +74,7 @@ function setTheme(style) {
 }
 ```
 
-setting/changing the giscus theme is now called whenever the user swaps betwen light and dark theme. And here are the functions, simply appended a little lower inside the same file.
+setting/changing the giscus theme is now called whenever the user swaps between light and dark theme. And here are the functions, simply appended a little lower inside the same file.
 
 ```js
 function getGiscusTheme() {
