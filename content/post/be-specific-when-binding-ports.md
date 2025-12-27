@@ -1,7 +1,7 @@
 ---
 title: Be Specific When Binding Ports!
 date: 2025-12-18
-draft: true
+draft: false
 summary: General rantings and thoughts about binding ports. Idea had from running into issues with Docker containers and Waydroid.
 ---
 # Be specific when binding ports!
